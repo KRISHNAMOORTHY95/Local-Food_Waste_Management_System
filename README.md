@@ -1,0 +1,1 @@
+# Local-Food_Waste_Management_System
