@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from database_utils import run_query
 
-# SQL Queries for reports - 21 comprehensive queries
+# SQL Queries
 queries = {
     "Food Available by Type": 
         """SELECT Food_Type, COUNT(*) as Count, SUM(Quantity) as Total_Quantity 
