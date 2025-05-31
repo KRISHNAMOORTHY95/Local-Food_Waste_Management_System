@@ -4,12 +4,6 @@ from database_utils import run_query
 
 # SQL Queries for reports - 21 comprehensive queries
 queries = {
-    "Food Expiring Soon (Next 3 Days)": 
-        """SELECT Food_ID, Food_Name, Quantity, Expiry_Date, Provider_Type, Location 
-           FROM food_listings 
-           WHERE DATE(Expiry_Date) BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 3 DAY) 
-           ORDER BY Expiry_Date""",
-    
     "Food Available by Type": 
         """SELECT Food_Type, COUNT(*) as Count, SUM(Quantity) as Total_Quantity 
            FROM food_listings 
